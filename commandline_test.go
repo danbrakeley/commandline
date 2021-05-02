@@ -15,6 +15,7 @@ func Test_ParseCommandLine(t *testing.T) {
 		{true, "two args", `foo bar`, []string{"foo", "bar"}},
 		{true, "one arg with space", `foo\ bar`, []string{"foo bar"}},
 		{true, "string with quotes", `foo "bar bar bar"`, []string{"foo", "bar bar bar"}},
+		{true, "string with single quotes", `foo bar 'baz bif'`, []string{"foo", "bar", "baz bif"}},
 		{true, "space prefix", ` space`, []string{"space"}},
 		{true, "tab prefix", "\ttab", []string{"tab"}},
 		{true, "space suffix", `baz `, []string{"baz"}},

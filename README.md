@@ -4,6 +4,14 @@
 
 Parses single string commandlines into command/arguments for use with the Go standard library os/exec.
 
+Examples (see [commandline_test.go](https://github.com/danbrakeley/commandline/blob/main/commandline_test.go) for more):
+
+input | output
+--- | ---
+`foo bar baz` | `[]string{"foo", "bar", "baz"}`
+`foo bar 'baz bif'` | `[]string{"foo", "bar", "baz bif"}`
+`bar --commit "it's done"` | `[]string{"bar", "--commit", "it's done"}`
+
 ## License
 
 See `LICENSE.txt`.
